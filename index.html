@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAmigos Foundation - NGO Awareness Page</title>
+
+
+<nav class="navbar">
+    <div class="logo">InAmigos Foundation</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+</nav>
+
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+       html{
+    scroll-behavior:smooth;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#27ae60;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+    padding:8px 12px;
+    border-radius:6px;
+}
+
+.nav-links li a:hover{
+    background:#27ae60;
+    color:white;
+}
+
+.hamburger{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* Mobile Menu */
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+
+        body{
+            font-family: Arial, sans-serif;
+            line-height:1.6;
+            background-color:#f4f4f4;
+        }
+
+        header{
+            background:#2c3e50;
+            color:white;
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        header h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        header p{
+            font-size:18px;
+        }
+
+        section{
+            padding:40px 10%;
+            background:white;
+            margin:20px auto;
+            width:90%;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color:#2c3e50;
+            margin-bottom:20px;
+            text-align:center;
+        }
+
+        .about p{
+            text-align:justify;
+            font-size:17px;
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .project-card{
+            background:#f9f9f9;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .project-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .project-card h3{
+            color:#27ae60;
+            margin-bottom:10px;
+        }
+
+        .impact ul{
+            padding-left:20px;
+        }
+
+        .impact li{
+            margin-bottom:10px;
+            font-size:17px;
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+
+        .cta{
+            background:#27ae60;
+            color:white;
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        .cta h2{
+            color:white;
+        }
+
+        .cta p{
+            margin:15px 0;
+            font-size:18px;
+        }
+
+        .btn{
+            display:inline-block;
+            background:white;
+            color:#27ae60;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#f1f1f1;
+        }
+
+        footer{
+            background:#2c3e50;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+
+        @media(max-width:768px){
+            header h1{
+                font-size:30px;
+            }
+        }
+    </style>
+</head>
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks")
+            .classList.toggle("active");
+}
+</script>
+
+
+<body>
+<section id="home">
+    <header>
+        <h1>InAmigos Foundation</h1>
+        <p>Uniting Minds for Change</p>
+    </header>
+
+    <section id="about">
+        <h2>About Our NGO</h2>
+
+        <p>
+            InAmigos Foundation is a non-profit organization committed to
+            creating a positive impact in society through education,
+            environmental sustainability, women empowerment, animal welfare,
+            hunger relief, and youth development. The organization believes
+            that every individual deserves equal opportunities and works
+            tirelessly to build a better future through various community
+            development initiatives.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Our Ongoing Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Project SEVA</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908391.jpg" alt="Project SEVA" width="290" height="220" style="border-radius:15px">
+                <p>
+                    Distribution of food, clothes, and basic necessities to
+                    underprivileged communities.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Bachpanshala</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738054440.jpg"alt="Project Bachpanshala" width="290" height="220" style="border-radius:15px">
+                    Educational support for children through learning programs,
+                    mentorship, and awareness initiatives.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project JEEV</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908350.jpg"alt="Project JEEV" width="290" height="220" style="border-radius:15px">
+                <p>
+                    Dedicated to animal welfare through feeding drives,
+                    rescue support, and awareness campaigns.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project UDAAN</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738238725.jpg" alt="Project UDAAN" width="290" height="220" style="border-radius: 15px">
+                <p>
+                    Empowering women through skill development, education,
+                    and self-employment opportunities.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project PRAKRITI</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908369.jpg"alt="Project PRAKRITI"width="290" height="220" style="border-radius:15px">
+                <p>
+                    Environmental conservation through tree plantation drives
+                    and sustainability awareness programs.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project VIKAS</h3>
+                <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738048982.jpg"alt="Project VIKAS"width="290" height="220" style="border-radius:15px">
+                <p>
+                    Providing internship opportunities and skill enhancement
+                    programs for students and young professionals.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="impact">
+        <h2>Social Impact</h2>
+
+        <ul>
+            <li>Supporting underprivileged communities through food and clothing drives.</li>
+            <li>Promoting quality education among children.</li>
+            <li>Encouraging environmental sustainability and green initiatives.</li>
+            <li>Empowering women through skill development programs.</li>
+            <li>Providing youth with practical industry experience through internships.</li>
+            <li>Improving animal welfare through rescue and feeding campaigns.</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+
+        <div class="gallery">
+
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738048982.jpg"
+                alt="image">
+
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738238698.jpg"
+                alt="image">
+
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738238755.JPG"
+                alt="image">
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908403.jpg"alt="image"> 
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908380.jpg"alt="image"> 
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1738238755.JPG"alt="image">  
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1743051382.jpg"alt="image"> 
+            <img src="https://inamigosfoundation.org.in/public/storage/gallery/1690908359.jpg"alt="image"> 
+
+
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Join Us & Make a Difference!</h2>
+
+        <p>
+            Together, we can create a better future for communities,
+            animals, and the environment.
+        </p>
+
+        <a href="https://inamigosfoundation.org.in/" class="btn">
+            Volunteer Now
+        </a>
+    </section>
+
+    <footer>
+        <p>
+            © 2026 InAmigos Foundation | Together We Create Impact
+        </p>
+    </footer>
+</section>
+</body>
+</html>
